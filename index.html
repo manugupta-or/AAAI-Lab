@@ -10,13 +10,48 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <style>
+      .hero-section {
+        position: relative;
+        height: 80vh;
+        overflow: hidden;
+      }
+      
+      .hero-slideshow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        animation: slideShow 16s infinite;
+      }
+      
+      @keyframes slideShow {
+        0%, 100% { 
+          background-image: url('img/team_lunch_may_2023.png');
+          opacity: 1;
+        }
+        25% { 
+          background-image: url('img/team_lunch_Feb_2025.jpeg'); /* Add 2nd image */
+          opacity: 1;
+        }
+        50% { 
+          background-image: url('img/lso_conf.jpeg'); /* Add 3rd image */
+          opacity: 1;
+        }
+        75% { 
+          background-image: url('img/income_tax_training.jpeg'); /* Add 4th image */
+          opacity: 1;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Navbar -->
     <section class=" ">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-          <a class="navbar-brand" href="index.html"> AAAI </a>
+          <a class="navbar-brand" href="index.html"> AAAI Lab</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -49,7 +84,7 @@
                 <a class="nav-link" href="Project.html">Project</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href=" Contact.html">Contact Us</a>
+                <a class="nav-link" href="Contact.html">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -58,45 +93,82 @@
     </section>
 
     <!-- hero section -->
-    <section>
-      <div class="container text-center py-5 mb-4">
-        <div class="p-5 mb-4 lc-block">
-          <div class="lc-block mb-4">
-            <div editable="rich">
-              <h2 class="fw-bold display-2">AAAI Lab</h2>
-            </div>
-          </div>
-          <div class="lc-block mb-5">
-            <div editable="rich">
-              <p class="lead">
-                Advanced Analytics and Artificial Intelligence (AAAI) group is
-                interested in research and knowledge dissemination of advanced
-                analytics techniques as well as artificial intelligence.
-                Advanced analytics techniques majorly include operations
-                research and optimization. The AAAI group actively seeks to
-                improve business operations.
-              </p>
-            </div>
-          </div>
-        </div>
+    <section class="hero-section text-white">
+      <div class="hero-slideshow"></div>
+      <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+      <div class="container position-relative z-1 d-flex flex-column justify-content-center align-items-center h-100 text-center">
+        <h1 class="display-2 fw-bold">AAAI Lab</h1>
+        <p class="lead mt-4 px-3">Advanced Analytics and Artificial Intelligence Research Group</p>
       </div>
     </section>
-    
 
-    <section class="container">
-      <hr>
-      <div class="py-5">
-        <h5>AAAI lab</h5>
-        <p>
-          Apart from printer and a few desktops, funds from the above sponsored
-          projects are utilized to develop a computational server facility. The
-          server has 192 GB RAM and 48 cores with Intel(R) Xeon(R) Gold 6248R
-          CPU @ 3.00GHz.
-        </p>
-        <p>
-          This server is available to students and faculty for their research
-          and other academic activities.
-        </p>
+<!-- 
+    <section
+    class="position-relative text-white"
+    style="background: url('img/team_lunch_may_2023.png') center/cover no-repeat; height: 80vh;"
+  >
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+    <div class="container position-relative z-1 d-flex flex-column justify-content-center align-items-center h-100 text-center">
+      <h1 class="display-2 fw-bold">AAAI Lab</h1>
+      <p class="lead mt-4 px-3">
+        Advanced Analytics and Artificial Intelligence Research Group
+      </p>
+    </div>
+  </section>
+   -->
+
+
+
+    <section class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h2 class="text-center mb-4">About AAAI Lab</h2>
+          <p class="lead text-center">
+            The <strong>Advanced Analytics and Artificial Intelligence (AAAI) Lab</strong> is a dynamic research group 
+            dedicated to pioneering advancements in data-driven decision-making, optimization, and AI technologies. 
+            We are interested in theoretical research as well as real-world applications in transportation and supply chains.
+          </p>
+          <div class="mt-4">
+            <h5 class="text-info">Research Focus</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">✓ <strong>Advanced Analytics</strong>: Applied Probability, optimization models, and queuing systems.</li>
+              <li class="mb-2">✓ <strong>Artificial Intelligence</strong>: Machine learning, game theory, and reinforcement learning.</li>
+              <!-- <li class="mb-2">✓ <strong>Industry Collaboration</strong>: Solving complex challenges in logistics, healthcare, and sustainability.</li> -->
+            </ul>
+          </div>
+          <div class="mt-4">
+            <h5 class="text-info">High-Performance Computing Infrastructure</h5>
+            <div class="row mt-3">
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-body">
+                    <h6 class="card-title text-primary">Computational Server</h6>
+                    <ul class="list-unstyled">
+                      <li><span class="fw-bold">CPU:</span> Intel Xeon Gold 6248R (48 cores @ 3.00GHz)</li>
+                      <li><span class="fw-bold">Memory:</span> 192GB DDR4 RAM</li>
+                      <li><span class="fw-bold">Use Cases:</span> Large Scale Optimization, Simulation etc. </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-body">
+                    <h6 class="card-title text-primary">GPU-Accelerated System</h6>
+                    <ul class="list-unstyled">
+                      <li><span class="fw-bold">GPUs:</span> NVIDIA RTX A4000 (16GB VRAM)</li>
+                      <li><span class="fw-bold">Memory:</span> 128 GB DDR5 RAM</li>
+                      <li><span class="fw-bold">Use Cases:</span> LLM training, Deep reinforcement learning etc.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="mt-3">
+              Our computational resources are available to students and faculty for their research and other academic activities. 
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -112,7 +184,7 @@
           </li>
           <li>
             17-21 June, 2024. Prof. Manu K Gupta attended a workshop
-            on reinforcement learning for stochastic netowrks at ENSEEIHT, Toulouse. 
+            on reinforcement learning for stochastic networks at ENSEEIHT, Toulouse. 
           </li>
           <li>
             21-25 January, 2024. PhD student Anirban Mitra attended a workshop

@@ -44,6 +44,26 @@
           opacity: 1;
         }
       }
+        /* Make links in the news section blue */
+      #news-section a {
+        color: blue !important;
+        text-decoration: none;
+      }
+
+      #news-section a:hover {
+        text-decoration: underline;
+      } 
+      /* Make links in the footer section blue */
+      footer a {
+        color: blue !important;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+
     </style>
   </head>
   <body>
@@ -107,20 +127,7 @@
       </div>
     </section>
 
-<!-- 
-    <section
-    class="position-relative text-white"
-    style="background: url('img/team_lunch_may_2023.png') center/cover no-repeat; height: 80vh;"
-  >
-    <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
-    <div class="container position-relative z-1 d-flex flex-column justify-content-center align-items-center h-100 text-center">
-      <h1 class="display-2 fw-bold">AAAI Lab</h1>
-      <p class="lead mt-4 px-3">
-        Advanced Analytics and Artificial Intelligence Research Group
-      </p>
-    </div>
-  </section>
-   -->
+
    <section id="news-section" class="container py-5">
     <div class="row">
       <!-- Left Column: About and Research -->
@@ -162,7 +169,7 @@
                   <ul class="list-unstyled">
                     <li><span class="fw-bold">GPU:</span> NVIDIA RTX A4000 (16GB VRAM)</li>
                     <li><span class="fw-bold">Memory:</span> 128 GB DDR5 RAM</li>
-                    <li><span class="fw-bold">Use Cases:</span> LLM training, Deep reinforcement learning etc.</li>
+                    <li><span class="fw-bold">Use Cases:</span> Deep Reinforcement Learning etc.</li>
                   </ul>
                 </div>
               </div>
@@ -171,39 +178,70 @@
           <p class="mt-3">
             Our computational resources are available to students and faculty for their research and other academic activities. 
           </p>
-        </div>
-      </div>
+
+          <h5 class="text-info">Our Sponsors</h5>
+          <div class="mt-4">
+            <marquee behavior="scroll" direction="left" scrollamount="5">
+              <a href="https://www.iitr.ac.in/" target="_blank">
+                <img src="img/iitr1.png" alt="IIT Roorkee" class="m-3" style="max-height: 100px;">
+              </a>
+              <a href="https://icssr.org" target="_blank">
+                <img src="img/ICSSR.png" alt="ICSSR" class="m-3" style="max-height: 100px;">
+              </a>
+              <a href="https://www.cefipra.org/" target="_blank">
+                <img src="img/cefipra.png" alt="CEFIPRA" class="m-3" style="max-height: 100px;">
+              </a>
+              <a href="https://www.dsir.gov.in/" target="_blank">
+                <img src="img/dsir.png" alt="DSIR" class="m-3" style="max-height: 100px;">
+              </a>
+              <a href="https://anrfonline.in/ANRF/HomePage" target="_blank">
+                <img src="img/serb.png" alt="SERB" class="m-3" style="max-height: 100px;">
+              </a>
+              <!-- Add more sponsor logos as needed -->
+            </marquee>
+          </div>    
+  </div>
+</div>
   
+      
       <!-- Right Column: News -->
       <div class="col-lg-4">
         <div class="p-3 bg-light rounded shadow-sm">
           <h5 class="text-info mb-3">News</h5>
           <ul class="list-unstyled">
             <li class="mb-3">
-              <strong>17-19 July, 2024:</strong> Prof. Manu K Gupta and PhD students attended a symposium on Game Theory at IISc Bengaluru.
+              <strong>23-25 April, 2025:</strong> Abhinav, Aditi and Mayank attended a workshop on
+            <a href="https://workshops.iima.ac.in/addo/" target="_blank" class="text-info">
+              Data-Driven Optimization</a>.
             </li>
             <li class="mb-3">
-              <strong>17-21 June, 2024:</strong> Prof. Manu K Gupta attended a workshop on reinforcement learning at ENSEEIHT, Toulouse.
+              <strong>28 Feb - 1 March, 2025:</strong> <a href="https://iitr.ac.in/lso/" target="_blank" class="text-info">Large Scale Optimization</a> conference jointly organized with <a href="https://www.iitr.ac.in/~DM/Sumit_Kumar_Yadav" target="_blank" class="text-info">Prof. Sumit</a>.
             </li>
             <li class="mb-3">
-              <strong>21-25 January, 2024:</strong> PhD student Anirban Mitra attended a workshop on Combinatorial Games.
+              <strong>17-19 July, 2024:</strong> PhD students Anirban and Konark attended a symposium on  <a href="https://gtl.csa.iisc.ac.in/gamearts/" target="_blank" class="text-info">Game Theory</a> at IISc Bengaluru.
             </li>
             <li class="mb-3">
-              <strong>15-25 January, 2024:</strong> PhD student Gopal Saha attended a GIAN course on MINLP.
+              <strong>06 August, 2024:</strong> Proposal accepted on AI for public transportation by <a href="https://www.dsir.gov.in/" target="_blank" class="text-info">DSIR</a>.
             </li>
             <li class="mb-3">
-              <strong>02 January, 2024:</strong> Proposal accepted on Sustainability and Social Welfare (ICSSR).
+              <strong>17-21 June, 2024:</strong> Manu K Gupta attended a workshop on <a href="https://indico.math.cnrs.fr/event/10541/overview" target="_blank" class="text-info">Reinforcement Learning</a> at ENSEEIHT, Toulouse, France.
             </li>
+            <li class="mb-3">
+              <strong>01 May, 2024:</strong> Proposal accepted on AI for restless bandits by <a href="https://www.cefipra.org/" target="_blank" class="text-info">CEFIPRA</a>.
+            </li>
+          
           </ul>
+          <p>
+            <a href="old-news.html" class="text-info">View Old News</a>
+          </p>
         </div>
       </div>
     </div>
   </section>
 
 
-
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-      <p>© 2025 <a href="#news-section" class="text-info" >AAAI Lab</a>  | <a href="Contact.html" class="text-info">Contact Us</a></p>
+    <footer style="background-color: #cfd7df;" class="text-black text-center py-3 mt-5">
+      <p>© 2025 <a href="index.html"  >AAAI Lab</a>  | <a href="Contact.html">Contact Us</a></p>
     </footer>
 
     <script
